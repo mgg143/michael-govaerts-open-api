@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Weather</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <div class="weather-card">
+        <h1>Weather Forecast</h1>
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city (e.g., Tokyo)">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div id="result" class="result-hidden">
+            <h2 id="cityName">---</h2>
+            <div class="temp-container">
+                <div class="temp-box">
+                    <span id="tempC">--</span>°C
+                </div>
+                <div class="temp-divider"></div>
+                <div class="temp-box">
+                    <span id="tempF">--</span>°F
+                </div>
+            </div>
+            <p id="description">Condition</p>
+        </div>
+        
+        <p id="error" class="error-msg"></p>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

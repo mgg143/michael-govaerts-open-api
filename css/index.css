@@ -1,0 +1,74 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.weather-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    width: 380px;
+    text-align: center;
+}
+
+.search-box { display: flex; gap: 10px; margin-bottom: 25px; }
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus { border-color: #2a5298; }
+
+button {
+    padding: 10px 20px;
+    background-color: #2a5298;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* New Temperature Layout */
+.temp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 15px 0;
+}
+
+.temp-box {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.temp-divider {
+    width: 2px;
+    height: 40px;
+    background-color: #ddd;
+}
+
+#description {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+.result-hidden { display: none; }
+.result-visible { display: block; animation: fadeIn 0.4s ease-in; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.error-msg { color: #e74c3c; margin-top: 15px; font-weight: 500; }
