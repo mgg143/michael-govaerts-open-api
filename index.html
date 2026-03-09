@@ -15,9 +15,14 @@
             <button id="searchBtn">Search</button>
         </div>
 
+        <nav id="navTabs" class="result-hidden nav-container">
+            <button id="tempTab" class="tab-btn">Temperature</button>
+            <button id="condTab" class="tab-btn">Conditions</button>
+        </nav>
+
         <div id="result" class="result-hidden">
             <h2 id="cityName">---</h2>
-            <div class="temp-container">
+            <div id="temperatureView" class="temp-container">
                 <div class="temp-box">
                     <span id="tempC">--</span>°C
                 </div>
@@ -26,9 +31,12 @@
                     <span id="tempF">--</span>°F
                 </div>
             </div>
-            <p id="description">Condition</p>
+ 
+            <div id="conditionsView" class="cond-container">
+                <p id="description">Condition</p>
+            </div>
         </div>
-        
+
         <p id="error" class="error-msg"></p>
     </div>
 
