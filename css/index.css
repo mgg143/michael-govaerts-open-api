@@ -1,0 +1,120 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* MOBILE-FIRST BASE STYLES */
+/* These rules apply to all screens, starting with the smallest phones */
+.weather-card {
+    background: white;
+    padding: 1.5rem; /* Slightly less padding to save space on small screens */
+    border-radius: 1.25rem; 
+    box-shadow: 0 0.938rem 2.188rem rgba(0,0,0,0.2);
+    
+    /* Responsive Width */
+    width: 90%; 
+    max-width: 23.75rem; 
+    
+    /* Center the content inside the card for a cleaner look on small screens */
+    text-align: center;
+}
+
+/* MEDIA QUERY FOR LARGER SCREENS */
+/* 48rem is roughly 768px, a standard breakpoint for tablets and desktops */
+@media (min-width: 48rem) { 
+    .weather-card {
+        padding: 2rem; /* Give the card larger padding on big screens */
+    }
+}
+
+.search-box { 
+    display: flex; 
+    gap: 0.625rem; 
+    margin-bottom: 1.563rem; }
+
+input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 0.125rem solid #eee;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus { border-color: #2a5298; }
+
+button {
+    padding: 0.625rem 1.25rem;
+    background-color: #2a5298;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+/* New Temperature Layout */
+.temp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    margin: 0.938rem 0;
+}
+
+.temp-box {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.temp-divider {
+    width: 0.125rem;
+    height: 2.5rem;
+    background-color: #ddd;
+}
+
+#description {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 0.313rem;
+    font-weight: bold;
+}
+
+.result-hidden { display: none; }
+.result-visible { display: block; 
+    animation: fadeIn 0.4s ease-in; 
+    text-align: center;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.error-msg { color: #e74c3c;
+    margin-top: 0.938rem;
+    font-weight: 500; 
+}
+
+/* Group our navigation buttons neatly */
+.nav-container {
+    display: flex;
+    gap: 0.625rem;
+    justify-content: center;
+    margin-bottom: 0.938rem;
+}
+
+/* Gives our tab buttons a consistent look */
+.tab-btn {
+    background-color: #555;
+    transition: background-color 0.3s;
+}
+
+/* Hide the conditions view by default when the page first loads */
+.cond-container {
+    display: none; 
+    margin: 0.938rem 0;
+    text-align: center;
+}
